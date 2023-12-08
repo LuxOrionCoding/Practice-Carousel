@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="carousel">
+        <button data-prev onclick="prevSwipe()" class="carousel__prev-btn carousel__btn"><</button>
+
+        <div class="carousel__img-container">
+            <ul class="carousel__img-list">
+              <li><img src="img/JunglePump.jpg" alt="image 1" class="carousel__img"></li>
+              <li><img src="img/DeskStay.jpg" alt="image 2" class="carousel__img"></li>
+              <li><img src="img/yellowPump.jpg" alt="image 3" class="carousel__img"></li>
+              <li><img src="img/morePump.jpg" alt="image 3" class="carousel__img"></li>
+            </ul>
+        </div>
+
+        <button data-next onclick="nextSwipe()" class="carousel__next-btn carousel__btn">></button>
+
+    </div>
+    
+    <div class="carousel__nav-container">
+        <ul class="carousel__nav-list">
+            <li><div class="carousel__dot current"></div></li>
+            <li><div class="carousel__dot"></div></li>
+            <li><div class="carousel__dot"></div></li>
+            <li><div class="carousel__dot"></div></li>
+        </ul>
+    </div>
+</body>
+</html>

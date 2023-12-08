@@ -1,0 +1,97 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100rem;
+  background-color: #050107;
+  overflow-x: hidden;
+}
+
+.carousel {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel__img-container {
+  position: relative;
+  display: flex;
+  margin-inline: 1.2rem;
+  width: 40rem;
+  height: 26.9rem;
+}
+.carousel__img-list {
+  display: flex;
+  position: relative;
+  gap: 1rem;
+  list-style: none;
+  transition: 1s;
+}
+.carousel__img {
+  width: 40rem;
+  height: 26.9rem;
+}
+.carousel__btn {
+  background-color: cyan;
+  color: black;
+  box-shadow: 0 0 1rem cyan;
+  font-weight: 600;
+  font-size: 1.6rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  z-index: 5;
+  transition: 250ms;
+}
+.carousel__btn:hover {
+  transform: scale(1.2);
+}
+.carousel__btn:active {
+  transform: scale(1);
+}
+.carousel__btn::-moz-selection {
+  background-color: transparent;
+}
+.carousel__btn::selection {
+  background-color: transparent;
+}
+.carousel__btn.disabled {
+  opacity: 0;
+  cursor: default;
+}
+.carousel__nav-container {
+  display: flex;
+  justify-content: center;
+  margin-top: -5rem;
+  margin-inline: auto;
+  width: 20rem;
+  height: 1rem;
+}
+.carousel__nav-list {
+  display: flex;
+  list-style: none;
+  gap: 1.8rem;
+}
+.carousel__dot {
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: #363636;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 500ms;
+}
+.carousel__dot.current {
+  background-color: cyan;
+  transform: scale(1.2);
+}/*# sourceMappingURL=main.css.map */

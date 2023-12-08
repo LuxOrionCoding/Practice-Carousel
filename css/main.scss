@@ -1,0 +1,117 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	height: 100rem;
+	background-color: #050107;
+	overflow-x: hidden;
+}
+
+.carousel {
+	width: 100vw;
+	height: 100vh;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	// container size
+	$width: 40rem;
+	$height: 26.9rem;
+	&__img-container {
+		position: relative;
+		display: flex;
+
+		margin-inline: 1.2rem;
+		// overflow: hidden;
+
+		width: $width;
+		height: $height;
+	}
+
+	&__img-list {
+		display: flex;
+		position: relative;
+		gap: 1rem;
+
+		list-style: none;
+		transition: 1s;
+	}
+
+	&__img {
+		width: $width;
+		height: $height;
+	}
+
+	&__btn {
+		background-color: cyan;
+		color: black;
+		box-shadow: 0 0 1rem cyan;
+
+		font-weight: 600;
+		font-size: 1.6rem;
+		
+		$btn-size: 2.5rem;
+		height: $btn-size;
+		width: $btn-size;
+
+		border-radius: 50%;
+		border: none;
+		cursor: pointer;
+		z-index: 5;
+
+		transition: 250ms;
+		&:hover  { transform: scale(1.2); }
+		&:active { transform: scale(1); 	}
+		&::selection {
+			background-color: transparent;
+		}
+
+		&.disabled {
+			opacity: 0;
+			cursor: default;
+		}
+	}
+
+	&__nav-container {
+		display: flex;
+		justify-content: center;
+		margin-top: -5rem;
+		margin-inline: auto;
+
+		// background: orange;
+		width: 20rem;
+		height: 1rem;
+	}
+
+	&__nav-list {
+		display: flex;
+		list-style: none;
+		gap: 1.8rem;
+	}
+
+	&__dot {
+		$circle-size: .8rem;
+		width: $circle-size;
+		height: $circle-size;
+
+		background-color: #363636;
+		border-radius: 50%;
+		cursor: pointer;
+
+		transition: 500ms;
+	}
+
+	&__dot.current {
+		background-color: cyan;
+		transform: scale(1.2);
+	}
+}
